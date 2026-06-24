@@ -1,0 +1,9 @@
+.index {
+  min-height: 100vh;
+  padding: 28px 0 42px;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(255, 237, 153, 0.48) 0, transparent 26%),
+    radial-gradient(circle at 88% 18%, rgba(176, 64, 30, 0.22) 0, transparent 24%),
+    linear-gradient(160deg, #fff1bf 0%, #e6a13e 52%, #753919 100%);
+  box-sizing: border-box;
+}
