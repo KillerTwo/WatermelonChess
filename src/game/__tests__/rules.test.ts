@@ -6,11 +6,14 @@ import {
   RED_START_POINTS,
   applyMove,
   countPieces,
+  createHistory,
   createInitialState,
   findConnectedGroups,
   generateLegalMoves,
   getNeighbors,
   getLegalTargets,
+  pushSnapshot,
+  restoreLatestSnapshot,
   validateMove,
 } from '..'
 import type { GameState, PointId } from '..'
@@ -57,6 +60,24 @@ describe('watermelon board model', () => {
     expect(neighbors).toEqual(['V_INNER_TOP', 'V_INNER_BOTTOM', 'H_INNER_LEFT', 'H_INNER_RIGHT'])
     neighbors.push('O_N')
     expect(getNeighbors('CENTER')).toEqual(['V_INNER_TOP', 'V_INNER_BOTTOM', 'H_INNER_LEFT', 'H_INNER_RIGHT'])
+  })
+})
+
+describe('game history', () => {
+  it('stores immutable snapshots and restores the latest snapshot', () => {
+    const initial = createInitialState()
+    const history = createHistory()
+    const nextHistory = pushSnapshot(history, initial)
+    const moved = applyMove(initial, { from: 'V_BOTTOM_ARC', to: 'V_INNER_BOTTOM', player: 'red' }).state
+    const restored = restoreLatestSnapshot(nextHistory)
+
+    expect(moved.pieces.V_INNER_BOTTOM).toBe('red')
+    expect(restored?.state).toEqual(initial)
+    expect(restored?.history).toEqual([])
+  })
+
+  it('returns null when restoring from empty history', () => {
+    expect(restoreLatestSnapshot(createHistory())).toBeNull()
   })
 })
 
