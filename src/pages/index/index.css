@@ -2,9 +2,10 @@
   min-height: 100vh;
   padding: 28px 0 42px;
   background:
-    radial-gradient(circle at 16% 16%, rgba(213, 174, 88, 0.2) 0, transparent 24%),
-    radial-gradient(circle at 82% 20%, rgba(48, 109, 77, 0.18) 0, transparent 18%),
-    repeating-linear-gradient(116deg, rgba(255, 228, 150, 0.04) 0 4px, transparent 4px 18px),
-    linear-gradient(160deg, #1d0f0a 0%, #5b321f 48%, #120907 100%);
+    radial-gradient(circle at 8% 16%, rgba(33, 145, 74, 0.08) 0 7%, transparent 8%),
+    radial-gradient(circle at 20% 16%, rgba(33, 145, 74, 0.05) 0 7%, transparent 8%),
+    radial-gradient(circle at 86% 24%, rgba(33, 145, 74, 0.07) 0 8%, transparent 9%),
+    repeating-linear-gradient(90deg, rgba(18, 126, 57, 0.045) 0 60px, transparent 60px 120px),
+    linear-gradient(160deg, #f6f8ff 0%, #eefaf3 48%, #f7f8ff 100%);
   box-sizing: border-box;
 }
