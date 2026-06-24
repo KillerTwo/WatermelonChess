@@ -1,0 +1,65 @@
+.game-panel {
+  width: 686px;
+  max-width: 92vw;
+  margin: 0 auto 28px;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 248, 226, 0.92);
+  box-shadow: 0 16px 32px rgba(78, 42, 14, 0.14);
+  box-sizing: border-box;
+}
+
+.game-panel__status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.game-panel__eyebrow {
+  font-size: 24px;
+  color: #8a4a18;
+  letter-spacing: 4px;
+}
+
+.game-panel__title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #281408;
+}
+
+.game-panel__meta,
+.game-panel__hint {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #74431e;
+}
+
+.game-panel__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 22px 0 16px;
+}
+
+.game-panel__picker,
+.game-panel__button {
+  min-width: 132px;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #f0cf87;
+  color: #321908;
+  font-size: 24px;
+  text-align: center;
+}
+
+.game-panel__button {
+  margin: 0;
+  border: 0;
+}
+
+.game-panel__button--primary {
+  background: #9f2d19;
+  color: #fff7df;
+}

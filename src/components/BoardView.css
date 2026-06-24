@@ -1,0 +1,155 @@
+.board-shell {
+  width: 686px;
+  max-width: 92vw;
+  margin: 28px auto 24px;
+  padding: 22px;
+  border-radius: 32px;
+  background: linear-gradient(145deg, #f4d18d 0%, #e8a948 55%, #8d4d1f 100%);
+  box-shadow: 0 22px 42px rgba(71, 34, 8, 0.28);
+  box-sizing: border-box;
+}
+
+.board-surface {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 45% 40%, #fff6df 0%, #f5d48d 58%, #d98438 100%);
+  overflow: hidden;
+}
+
+.board-line {
+  position: absolute;
+  pointer-events: none;
+  border-color: #2a160d;
+}
+
+.board-line--outer {
+  inset: 4%;
+  border: 8px solid #2a160d;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(42, 22, 13, 0.18);
+}
+
+.board-line--vertical {
+  left: 50%;
+  top: 4%;
+  width: 4px;
+  height: 92%;
+  margin-left: -2px;
+  background: #2a160d;
+}
+
+.board-line--horizontal {
+  left: 4%;
+  top: 50%;
+  width: 92%;
+  height: 4px;
+  margin-top: -2px;
+  background: #2a160d;
+}
+
+.board-line--inner-circle {
+  left: 31%;
+  top: 31%;
+  width: 38%;
+  height: 38%;
+  border: 4px solid #2a160d;
+  border-radius: 50%;
+}
+
+.board-line--top-arc,
+.board-line--bottom-arc {
+  left: 31%;
+  width: 38%;
+  height: 18%;
+  border: 4px solid #2a160d;
+  border-radius: 0 0 50% 50%;
+}
+
+.board-line--top-arc {
+  top: 8%;
+  border-top: 0;
+}
+
+.board-line--bottom-arc {
+  bottom: 8%;
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.board-line--left-arc,
+.board-line--right-arc {
+  top: 31%;
+  width: 18%;
+  height: 38%;
+  border: 4px solid #2a160d;
+}
+
+.board-line--left-arc {
+  left: 8%;
+  border-left: 0;
+  border-radius: 0 50% 50% 0;
+}
+
+.board-line--right-arc {
+  right: 8%;
+  border-right: 0;
+  border-radius: 50% 0 0 50%;
+}
+
+.board-point {
+  position: absolute;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  border-radius: 50%;
+  background: #1f120b;
+  border: 4px solid #1f120b;
+  box-sizing: border-box;
+}
+
+.board-point--red,
+.board-point--black {
+  width: 42px;
+  height: 42px;
+  margin-left: -21px;
+  margin-top: -21px;
+  box-shadow: 0 8px 16px rgba(39, 18, 6, 0.28);
+}
+
+.board-point--red {
+  background: radial-gradient(circle at 35% 30%, #ffb2a0 0%, #df2e20 48%, #78120d 100%);
+  border-color: #7c120c;
+}
+
+.board-point--black {
+  background: radial-gradient(circle at 35% 30%, #5d5b55 0%, #1d1a17 58%, #050403 100%);
+  border-color: #050403;
+}
+
+.board-piece-shine {
+  position: absolute;
+  left: 8px;
+  top: 7px;
+  width: 10px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.board-point--selected {
+  outline: 6px solid rgba(255, 241, 143, 0.92);
+}
+
+.board-point--target {
+  background: #ffe875;
+  border-color: #7d4d05;
+  box-shadow: 0 0 0 8px rgba(255, 232, 117, 0.28);
+}
+
+.board-point--disabled {
+  opacity: 0.74;
+}
