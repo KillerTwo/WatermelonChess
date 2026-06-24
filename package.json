@@ -31,17 +31,11 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:harmony-hybrid": "npm run build:harmony-hybrid -- --watch"
   },
-  "browserslist": {
-    "development": [
-      "defaults and fully supports es6-module",
-      "maintained node versions"
-    ],
-    "production": [
-      "last 3 versions",
-      "Android >= 4.1",
-      "ios >= 8"
-    ]
-  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.24.4",
