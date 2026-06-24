@@ -61,6 +61,21 @@ describe('watermelon board model', () => {
     neighbors.push('O_N')
     expect(getNeighbors('CENTER')).toEqual(['V_INNER_TOP', 'V_INNER_BOTTOM', 'H_INNER_LEFT', 'H_INNER_RIGHT'])
   })
+
+  it('connects the four points on the center circle by arcs', () => {
+    expect(getNeighbors('H_INNER_RIGHT')).toEqual(
+      expect.arrayContaining(['CENTER', 'H_RIGHT_ARC', 'V_INNER_TOP', 'V_INNER_BOTTOM']),
+    )
+    expect(getNeighbors('H_INNER_LEFT')).toEqual(
+      expect.arrayContaining(['CENTER', 'H_LEFT_ARC', 'V_INNER_TOP', 'V_INNER_BOTTOM']),
+    )
+    expect(getNeighbors('V_INNER_TOP')).toEqual(
+      expect.arrayContaining(['V_TOP_ARC', 'CENTER', 'H_INNER_LEFT', 'H_INNER_RIGHT']),
+    )
+    expect(getNeighbors('V_INNER_BOTTOM')).toEqual(
+      expect.arrayContaining(['CENTER', 'V_BOTTOM_ARC', 'H_INNER_LEFT', 'H_INNER_RIGHT']),
+    )
+  })
 })
 
 describe('game history', () => {
